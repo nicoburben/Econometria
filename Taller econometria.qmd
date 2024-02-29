@@ -1,0 +1,125 @@
+---
+title: "Taller wooldridge"
+author: "Edwin"
+format: html
+editor: visual
+---
+
+# Taller Wooldridge
+
+Nicolas Burgos Benavides
+
+Laura Camila Gomez Castellanos
+
+Edwin Camilo Vaca Suárez
+
+## C3.1
+
+Un problema de interés para los funcionarios de salud (y para otros) es determinar los efectos
+que el fumar durante el embarazo tiene sobre la salud infantil. Una medida de la salud infantil
+es el peso al nacer; un peso demasiado bajo puede ubicar al niño en riesgo de contraer varias
+enfermedades. Ya que es probable que otros factores que afectan el peso al nacer estén correlacionados con fumar, deben considerarse. Por ejemplo, un nivel de ingresos más alto en general
+da como resultado el acceso a mejores cuidados prenatales y a una mejor nutrición de la madre.
+Una ecuación que reconoce estos factores es
+
+$$
+bwght = \beta_0\ + \beta_1\ cigs + \beta_2\ faminc + u
+$$
+
+1.  ¿Cual es el signo más probable para $$\beta_2\ $$?
+
+    El signo más probable para $$ \beta_2\ $$ es positivo, puesto que entre más unidades aumente el ingreso de las familias se mejora el cuidado prenatal, resultando que el peso del bebe sea mayor al de los padres que no tengan los recursos suficientes para cubrir tales gastos.
+
+2.  ¿Cree que cigs y faminc estén correlacionados? Explique por qué la correlación puede ser
+    positiva o negativa.
+
+    Si existe correlación entre las dos variables, lo más probable es que este cercano a cero por que no se puede determinar con certeza su correlación aun así, tendiendo a ser positiva ya que una familia con mayores ingresos tiene más capacidad para comprar cigarrillos y así consumirlos.
+
+3.  Ahora, calcule la ecuación con y sin faminc utilizando los datos del archivo BWGHT.
+    RAW. Dé los resultados en forma de ecuación incluyendo el tamaño de la muestra y la Rcuadrada. Explique sus resultados enfocándose en si el añadir faminc modifica de manera
+    sustancial el efecto esperado de cigs sobre bwght.
+
+    Con faminc
+
+    $$
+    bwght = 116.97413 - 0.46341cigs + 0.09276faminc + u
+    $$
+
+    $$
+    R^2=0.02840383
+    $$
+
+    Sin faminc
+
+    $$
+    bwght = 116.97413-0.51377cigs  + u
+    $$
+
+    $$
+    R^2=0.02202402
+    $$
+
+    Al momento de calcular la ecuación de regresión teniendo en cuenta la variable de ingreso familiar (faminc), el resultado del coeficiente de determinación es de un 2.8%, este no diferencia de gran manera el resultado que se obtiene al calcular sin tener en cuenta la variable (faminc), que es del 2.2%, lo que significa que el peso del recién nacido se ve afectado tanto por la cantidad de cigarrillos fumados durante su gestación como por el ingreso de la familia en la que nace.
+
+## C3.2
+
+Utilice los datos del archivo HPRICE1.RAW para estimar el modelo
+
+$$
+price = \beta_0\ + \beta_1\ sqrft + \beta_2\ bdrms + u
+$$
+
+donde price es el precio de casas dado en miles de dólares.
+
+1.  Escriba los resultados en forma de ecuación.
+
+    $$
+    price = -19.31500 + 0.12844sqrft + 15.19819bdrms + u
+    $$
+
+2.  ¿Cual es el incremento en precio estimado para una casa con una habitación (bdrms) más,
+    manteniendo constante la superficie en pies cuadrados (sqrft)?
+
+    Por cada habitación adicional manteniendo constante la superficie hay un incremento en el precio de \$15.198 dolares.
+
+3.  ¿Cual es el incremento en precio estimado para una casa con una habitación adicional de
+    140 pies cuadrados?
+
+    $$
+    price = -19.31500 + 0.12844(140) + 15.19819(1) 
+    $$
+
+    $$price=
+    33.17979
+    $$
+    En el punto II, por cada habitación adicional manteniendo constante la superficie, el precio aumenta \$15.198. Sin embargo, al añadir una habitación incrementando la superficie de la casa en 140 pies cuadrados, el precio aumenta en \$33, 179 dolares.
+
+4.  ¿Qué porcentaje de la variación en el precio se explica por la extensión en pies cuadrados
+    y el número de habitaciones?
+
+    $$
+    R^2=
+    0.6232577
+    $$
+
+    Es decir que aproximadamente el 62,32% de la variación del precio se explica por la extensión en pies cuadrados y el número de habitaciones.
+
+5.  La primera casa en la muestra tiene sqrft 2,438 y bdrms  4. Determine el precio de
+    venta estimado para esta casa con la línea de regresión de MCO.
+
+    $$price=-19.31500+0.12844(2438)+15.19819(4)
+    $$
+
+    $$price=
+    354.6145
+    $$
+    El precio de venta estimado para la casa con superficie de 2,438 pies cuadrados y cuatro habitaciones es de \$354,614 dolares.
+
+6.  El precio de venta de la primera casa en la muestra fue \$300,000 (así que price 300).
+    Determine el residual para esta casa. ¿Sugiere esto que el comprador pagó de más o de
+    menos por la casa?
+
+    $$Residual=300000-354614$$
+
+    $$Residual=-54614$$
+    Teniendo en cuenta que el precio estimado de la propiedad es de \$354,614 dolares y que el precio fue de \$300,000 dolares, el comprador pagó de menos de lo que se había estimado por la casa.
