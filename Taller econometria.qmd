@@ -42,7 +42,7 @@ $$
     Con faminc
 
     $$
-    bwght = 116.97413 - 0.46341cigs + 0.09276faminc + u
+    bwght = 116.97413 - 0.46341cigs + 0.09276faminc 
     $$
 
     $$
@@ -52,7 +52,7 @@ $$
     Sin faminc
 
     $$
-    bwght = 116.97413-0.51377cigs  + u
+    bwght = 116.97413-0.51377cigs  
     $$
 
     $$
@@ -74,7 +74,7 @@ donde price es el precio de casas dado en miles de dólares.
 1.  Escriba los resultados en forma de ecuación.
 
     $$
-    price = -19.31500 + 0.12844sqrft + 15.19819bdrms + u
+    price = -19.31500 + 0.12844sqrft + 15.19819bdrms 
     $$
 
 2.  ¿Cual es el incremento en precio estimado para una casa con una habitación (bdrms) más,
